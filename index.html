@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <div id="background-options">
+            <label for="bg-image"><h3>Change Background Image:</h3></label>
+            <input type="file" id="bg-image" accept="image/*">
+        </div>
+        <form id="todo-form">
+            <label for="todo-input"><h3>Task:</h3></label>
+            <input type="text" id="todo-input" placeholder="Enter task" autocomplete="off">
+            
+            <label for="due-date"><h3>Due Date:</h3></label>
+            <input type="date" id="due-date">
+            
+            <label for="category"><h3>Category:</h3></label>
+            <input type="text" id="category" placeholder="Enter category">
+
+            <label for="priority"><h3>Priority:</h3></label>
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            
+            <button type="submit" aria-label="Add task">Add</button>
+        </form>
+
+        <section>
+            <h2>Remaining Tasks</h2>
+            <ul class="todo-list" id="remaining-list"></ul>
+        </section>
+
+        <section>
+            <h2>Completed Tasks</h2>
+            <ul class="todo-list" id="completed-list"></ul>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
